@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+slides/out/*.debug.png
+.DS_Store

@@ -1,0 +1,81 @@
+<!-- SLIDE 5 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">Contexto</div>
+    <h2 class="heading" data-asset="heading">Revisão rápida: <span class="em">kernel</span>, stride e padding</h2>
+    <div class="body">
+      <svg class="diagram" data-asset="diagram" width="1136" height="236" viewBox="0 0 1136 236">
+<g transform="translate(0,0)">
+<text x="176" y="18" text-anchor="middle" style="font-size:15px; font-weight:600;">K = 3 · S = 1 · P = 0</text>
+<rect x="52" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="88" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="124" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="160" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="196" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="232" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="268" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<path d="M88 76 L50 150 L158 150 L120 76 Z" fill="#00408F" fill-opacity=".10"/>
+<rect x="49" y="149" width="110" height="38" rx="7" fill="none" stroke="#00408F" stroke-width="2.5"/>
+<rect x="88" y="42" width="32" height="32" rx="5" fill="#00408F" stroke="#00408F" stroke-width="1.6"/>
+<rect x="124" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="160" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="196" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="232" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<text x="176" y="222" text-anchor="middle" style="font-size:15px; fill:#54677D;">saída menor: 5 valores</text>
+</g>
+<g transform="translate(392,0)">
+<text x="176" y="18" text-anchor="middle" style="font-size:15px; font-weight:600;">K = 3 · S = 2 · P = 0</text>
+<rect x="52" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="88" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="124" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="160" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="196" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="232" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="268" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<path d="M88 76 L50 150 L158 150 L120 76 Z" fill="#00408F" fill-opacity=".10"/>
+<rect x="49" y="149" width="110" height="38" rx="7" fill="none" stroke="#00408F" stroke-width="2.5"/>
+<rect x="121" y="145" width="110" height="46" rx="7" fill="none" stroke="#00408F" stroke-width="1.6" stroke-dasharray="5 4"/>
+<rect x="88" y="42" width="32" height="32" rx="5" fill="#00408F" stroke="#00408F" stroke-width="1.6"/>
+<rect x="160" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="232" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<text x="176" y="222" text-anchor="middle" style="font-size:15px; fill:#54677D;">stride 2: pula posições → 3</text>
+</g>
+<g transform="translate(784,0)">
+<text x="176" y="18" text-anchor="middle" style="font-size:15px; font-weight:600;">K = 3 · S = 1 · P = 1</text>
+<rect x="16" y="152" width="32" height="32" rx="5" fill="#fff" stroke="#54677D" stroke-width="1.3" stroke-dasharray="4 3"/>
+<text x="32" y="174" text-anchor="middle" style="font-size:13px; fill:#54677D;">0</text>
+<rect x="304" y="152" width="32" height="32" rx="5" fill="#fff" stroke="#54677D" stroke-width="1.3" stroke-dasharray="4 3"/>
+<text x="320" y="174" text-anchor="middle" style="font-size:13px; fill:#54677D;">0</text>
+<rect x="52" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="88" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="124" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="160" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="196" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="232" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<rect x="268" y="152" width="32" height="32" rx="5" fill="#B5DCF1" stroke="#14202E" stroke-width="1.3"/>
+<path d="M52 76 L14 150 L122 150 L84 76 Z" fill="#00408F" fill-opacity=".10"/>
+<rect x="13" y="149" width="110" height="38" rx="7" fill="none" stroke="#00408F" stroke-width="2.5"/>
+<rect x="52" y="42" width="32" height="32" rx="5" fill="#00408F" stroke="#00408F" stroke-width="1.6"/>
+<rect x="88" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="124" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="160" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="196" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="232" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<rect x="268" y="42" width="32" height="32" rx="5" fill="#fff" stroke="#00408F" stroke-width="1.6"/>
+<text x="176" y="222" text-anchor="middle" style="font-size:15px; fill:#54677D;">padding: saída = entrada (7)</text>
+</g>
+      </svg>
+      <div class="cols" style="margin-top:36px; gap:40px;">
+        <div data-asset="note-cnn" style="border-left:3px solid #00408F; padding:4px 0 4px 20px;">
+          <div class="kicker" style="margin-bottom:6px;">Como funciona</div>
+          <div style="font-size:18px; line-height:1.45;">Cada kernel desliza sobre a entrada e produz um <b>mapa de resposta</b>. Camadas conv extraem features; camadas FC classificam.</div>
+        </div>
+        <div data-asset="note-conv" style="border-left:3px solid #00408F; padding:4px 0 4px 20px;">
+          <div class="kicker" style="margin-bottom:6px;">A convenção que o paper quebra</div>
+          <div style="font-size:18px; line-height:1.45;">Todos os kernels de uma camada têm o mesmo D×W×H: o tamanho do kernel vira <b>atributo da camada</b>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

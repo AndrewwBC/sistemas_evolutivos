@@ -1,0 +1,19 @@
+<!-- SLIDE 12 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">Experimentos</div>
+    <h2 class="heading" data-asset="heading">Configuração dos <span class="em">experimentos</span></h2>
+    <div class="body">
+      <div class="stats" data-asset="stats" style="gap:36px;">
+        <div class="stat"><div class="s-label">Datasets</div><div class="s-value" style="font-size:58px;">4</div><div class="s-note">MNIST e Fashion-MNIST (cinza) · SVHN e CIFAR-10 (RGB natural)</div></div>
+        <div class="stat"><div class="s-label">Execuções × gerações</div><div class="s-value" style="font-size:58px;">10 × 100</div><div class="s-note">por experimento, com e sem especiação</div></div>
+        <div class="stat"><div class="s-label">Do treino por época</div><div class="s-value" style="font-size:58px;">10%</div><div class="s-note">sorteados por rede: nenhuma rede vê o dataset inteiro</div></div>
+        <div class="stat"><div class="s-label">Redes na população</div><div class="s-value" style="font-size:58px;">64 → 111</div><div class="s-note">inicial → máximo, uma CPU por rede</div></div>
+      </div>
+      <div class="callout" data-asset="callout" style="margin-top:56px;">
+        <b>Detalhes:</b> só camadas conv e FC (sem pooling) · batch 128 · pesos iniciais N(0; 0,1) · 8 espécies iniciais, no máximo 16 · cada filho é avaliado no teste <b>antes de qualquer treino</b>.
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

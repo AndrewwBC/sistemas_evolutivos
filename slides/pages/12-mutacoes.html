@@ -1,0 +1,93 @@
+<!-- SLIDE 10 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">O método · Operadores</div>
+    <h2 class="heading" data-asset="heading">Como a estrutura <span class="em">muta</span></h2>
+    <div class="body">
+      <div class="cols" style="grid-template-columns: 500px 1fr; gap:56px; align-items:center;">
+<svg class="diagram" data-asset="diagram" width="500" height="380" viewBox="0 0 500 380">
+  <defs><marker id="arr10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14202E"/></marker></defs>
+  <rect x="40.0" y="130.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="60.0" y="130.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="80.0" y="130.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="40.0" y="150.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="60.0" y="150.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="80.0" y="150.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="40.0" y="170.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="60.0" y="170.0" width="20" height="20" fill="#002A5C" stroke="#fff" stroke-width="1.5"/>
+<rect x="80.0" y="170.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="40.0" y="190.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="60.0" y="190.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="80.0" y="190.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="40.0" y="210.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="60.0" y="210.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="80.0" y="210.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+  <text x="70" y="260" text-anchor="middle" style="font-size:16px; font-weight:700;">3×5</text>
+  <path d="M120 160 C 190 160, 220 90, 300 90" class="d-edge" marker-end="url(#arr10)"/>
+  <text x="196" y="96" text-anchor="middle" style="font-size:13px; font-weight:500; fill:#54677D;">largura +2</text>
+  <path d="M120 200 C 190 200, 220 280, 330 280" class="d-edge" marker-end="url(#arr10)"/>
+  <text x="200" y="272" text-anchor="middle" style="font-size:13px; font-weight:500; fill:#54677D;">altura +2</text>
+  <rect x="330.0" y="40.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="350.0" y="40.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="370.0" y="40.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="390.0" y="40.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="410.0" y="40.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="330.0" y="60.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="350.0" y="60.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="370.0" y="60.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="390.0" y="60.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="410.0" y="60.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="330.0" y="80.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="350.0" y="80.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="370.0" y="80.0" width="20" height="20" fill="#002A5C" stroke="#fff" stroke-width="1.5"/>
+<rect x="390.0" y="80.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="410.0" y="80.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="330.0" y="100.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="350.0" y="100.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="370.0" y="100.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="390.0" y="100.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="410.0" y="100.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="330.0" y="120.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="350.0" y="120.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="370.0" y="120.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="390.0" y="120.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="410.0" y="120.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+  <text x="380" y="166" text-anchor="middle" style="font-size:16px; font-weight:700;">5×5</text>
+  <rect x="360.0" y="200.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="200.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="200.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="220.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="220.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="220.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="240.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="240.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="240.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="260.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="260.0" width="20" height="20" fill="#002A5C" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="260.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="280.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="280.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="280.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="300.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="300.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="300.0" width="20" height="20" fill="#B5DCF1" stroke="#fff" stroke-width="1.5"/>
+<rect x="360.0" y="320.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="380.0" y="320.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+<rect x="400.0" y="320.0" width="20" height="20" fill="#F7A600" stroke="#fff" stroke-width="1.5"/>
+  <text x="450" y="276" style="font-size:16px; font-weight:700;">3×7</text>
+  <rect x="20" y="350" width="14" height="14" fill="#B5DCF1"/><text x="40" y="362" style="font-size:13px; fill:#54677D;">original</text>
+  <rect x="120" y="350" width="14" height="14" fill="#F7A600"/><text x="140" y="362" style="font-size:13px; fill:#54677D;">adicionado</text>
+  <rect x="240" y="350" width="14" height="14" fill="#002A5C"/><text x="260" y="362" style="font-size:13px; fill:#54677D;">centro preservado</text>
+</svg>
+        <ul class="bullets" data-asset="bullets" style="font-size:17px;">
+          <li><b>Kernel:</b> cresce ou encolhe W ou H em 2 — continua ímpar e o centro é preservado. Limites: 1×1 até metade da entrada.</li>
+          <li><b>Stride:</b> ±1 em W ou H. Rara, porque muda o tamanho de todas as camadas acima.</li>
+          <li><b>Padding:</b> não muta; vale ⌊maior kernel / 2⌋, então a saída mantém o tamanho da entrada.</li>
+          <li><b>Nós e camadas:</b> adicionar/remover kernels e camadas (conv ou FC).</li>
+          <li>Probabilidade de cada mutação ∝ 1 / conexões afetadas. Formato inicial com p ∝ e<sup>−W·H</sup>: <b>começa pequeno</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

@@ -1,0 +1,119 @@
+<!-- SLIDE 7 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">O método · Contribuição 1</div>
+    <h2 class="heading" data-asset="heading">Crossover em camadas: kernels como <span class="em">genes</span></h2>
+    <div class="body">
+      <div class="cols" style="grid-template-columns: 620px 1fr; gap:48px; align-items:center;">
+<svg class="diagram" data-asset="diagram" width="620" height="350" viewBox="0 0 620 350">
+  <defs><marker id="arr7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14202E"/></marker></defs>
+  <g transform="translate(10,30)">
+<line x1="30" y1="15.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<rect x="0" y="0.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="0" y="40.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="0" y="80.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="0" y="120.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="20.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="60.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="100.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="124" y="40.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="124" y="80.0" width="30" height="30" rx="6" fill="#00408F"/>
+<text x="77.0" y="186" text-anchor="middle" style="font-size:16px; font-weight:700;">Pai 1</text>
+<text x="77.0" y="208" text-anchor="middle" style="font-size:13px; fill:#54677D;">fitness relativo 0,7</text>
+</g>
+  <text x="198" y="116" text-anchor="middle" style="font-size:28px; fill:#54677D;">×</text>
+  <g transform="translate(232,30)">
+<line x1="30" y1="15.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<rect x="0" y="0.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="0" y="40.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="0" y="80.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="0" y="120.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="62" y="20.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="62" y="60.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="62" y="100.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="124" y="40.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="124" y="80.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<text x="77.0" y="186" text-anchor="middle" style="font-size:16px; font-weight:700;">Pai 2</text>
+<text x="77.0" y="208" text-anchor="middle" style="font-size:13px; fill:#54677D;">fitness relativo 0,4</text>
+</g>
+  <line x1="408" y1="110" x2="452" y2="110" class="d-edge" marker-end="url(#arr7)"/>
+  <g transform="translate(464,30)">
+<line x1="30" y1="15.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="15.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="55.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="95.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="35.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="75.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="30" y1="135.0" x2="62" y2="115.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="35.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="75.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="55.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<line x1="92" y1="115.0" x2="124" y2="95.0" stroke="#D5E3EF" stroke-width="1.2"/>
+<rect x="0" y="0.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="0" y="40.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="0" y="80.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="0" y="120.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="20.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="60.0" width="30" height="30" rx="6" fill="#00408F"/>
+<rect x="62" y="100.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="124" y="40.0" width="30" height="30" rx="6" fill="#F7A600"/>
+<rect x="124" y="80.0" width="30" height="30" rx="6" fill="#00408F"/>
+<text x="77.0" y="186" text-anchor="middle" style="font-size:16px; font-weight:700;">Filho</text>
+<text x="77.0" y="208" text-anchor="middle" style="font-size:13px; fill:#54677D;">genes dos dois pais</text>
+</g>
+  <rect x="10" y="300" width="14" height="14" rx="3" fill="#00408F"/><text x="32" y="312" style="font-size:13px; fill:#54677D;">gene do pai 1</text>
+  <rect x="140" y="300" width="14" height="14" rx="3" fill="#F7A600"/><text x="162" y="312" style="font-size:13px; fill:#54677D;">gene do pai 2</text>
+  <text x="10" y="340" style="font-size:13px; fill:#54677D;">coluna = camada (cromossomo) · quadrado = kernel (gene)</text>
+</svg>
+        <ul class="bullets" data-asset="bullets" style="font-size:17px;">
+          <li><b>Gene indivisível</b> = um nó (kernel) com todas as suas conexões de entrada e pesos.</li>
+          <li>Com especiação, os pais têm as mesmas camadas e tamanhos → o filho é <b>sempre funcional</b>, sem adicionar nem podar conexões.</li>
+          <li>Cada gene vem de um pai com probabilidade proporcional ao seu <b>fitness relativo</b>.</li>
+          <li>Sem especiação: a similaridade <i>s</i> = O / (N<sub>i</sub> + N<sub>j</sub> − O) decide quem cruza; o excedente vem do pai maior.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

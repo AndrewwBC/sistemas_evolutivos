@@ -1,0 +1,302 @@
+/* ==========================================================================
+   UFPel presentation template — 1280×720 slides
+   Brand foundation: ../../RULES.md   Layout rules: ./RULES.md
+   ========================================================================== */
+
+/* ---- fonts ---------------------------------------------------------- */
+/* Montserrat variable font — one file covers weights 100–900 */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat[wght].ttf') format('truetype-variations');
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Italic[wght].ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* ---- tokens ---------------------------------------------------------- */
+:root {
+  --ufpel-blue: #00408F;
+  --ufpel-navy: #002A5C;
+  --ufpel-ink: #14202E;
+  --ufpel-muted: #54677D;
+  --ufpel-sky: #B5DCF1;
+  --ufpel-pale: #EAF4FB;
+  --ufpel-white: #FFFFFF;
+  /* utility status colors — callout semantics only, never decoration */
+  --success: #0A9B76; --success-bg: #E6F5F0;
+  --warning: #E58E1A; --warning-bg: #FFF4E3;
+  --danger:  #D64545; --danger-bg:  #FBECEC;
+  --r-tile: 22px; --r-card: 32px; --r-table: 12px;
+}
+
+/* ---- base ------------------------------------------------------------ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #3A3D46;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.slide {
+  width: 1280px; height: 720px;
+  position: relative; overflow: hidden;
+  background: var(--ufpel-white); color: var(--ufpel-ink);
+  margin: 24px auto;
+}
+.slide.dark { background: var(--ufpel-navy); color: var(--ufpel-white); }
+/* quiet flow-line anchor on every light slide — keeps white pages on-brand */
+.slide:not(.dark)::after {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 420px; height: 160px; z-index: 1; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='160' viewBox='0 0 420 160' fill='none'%3E%3Cpath d='M420 30 C320 30 290 80 190 80 L0 80' stroke='%23B5DCF1' stroke-opacity='.42' stroke-width='1.3'/%3E%3Cpath d='M420 120 C350 120 330 60 240 60 L120 60' stroke='%23B5DCF1' stroke-opacity='.25' stroke-width='1.3'/%3E%3Ccircle cx='190' cy='80' r='3.5' fill='%23B5DCF1' fill-opacity='.55'/%3E%3Crect x='236' y='56' width='7' height='7' fill='%2300408F' fill-opacity='.4'/%3E%3C/svg%3E") no-repeat;
+}
+
+@media print {
+  body { background: none; }
+  .slide { margin: 0; page-break-after: always; }
+}
+@page { size: 1280px 720px; margin: 0; }
+
+/* ---- ufpel-gradient surfaces -------------------------------------------------- */
+/* STRICTLY UFPel blue family (PMS 287) — no violet, magenta, or warm hues.
+   Prefer this CSS gradient on dividers/quotes; the JPG
+   (static/ufpel-hero-bg.jpg) is for full heroes (covers, closings). */
+.ufpel-gradient {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(95% 70% at 88% 106%, rgba(99, 158, 224, .38) 0%, transparent 52%),
+    radial-gradient(150% 110% at 42% 108%, rgba(0, 64, 143, .90) 0%, transparent 64%),
+    radial-gradient(120% 90% at 108% 40%, rgba(0, 64, 143, .32) 0%, transparent 55%),
+    linear-gradient(180deg, #001630 0%, #001F45 55%, #002A5C 100%);
+}
+.hero-img {
+  position: absolute; inset: 0; z-index: 0;
+  object-fit: cover; width: 100%; height: 100%;
+}
+.hero-veil { /* light scrim keeping the text zone readable */
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 48%, rgba(0,0,0,0) 100%);
+}
+
+/* ---- slide chrome ----------------------------------------------------- */
+.content {
+  position: relative; z-index: 5; padding: 60px 72px 96px; height: 100%;
+  display: flex; flex-direction: column;
+}
+/* main payload centers in the space between heading and footer */
+.body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 16px; }
+.footer {
+  position: absolute; left: 72px; right: 72px; bottom: 28px; z-index: 40;
+  display: flex; align-items: center; gap: 16px;
+  font-size: 12px; color: var(--ufpel-muted);
+}
+.footer img { height: 38px; }
+.footer .f-title { flex: 1; text-align: center; }
+.footer .f-page b { color: var(--ufpel-ink); font-weight: 600; }
+.slide.dark .footer .f-page b { color: var(--ufpel-white); }
+
+.kicker {
+  font-size: 14px; font-weight: 500; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ufpel-muted); margin-bottom: 10px;
+}
+.slide.dark .kicker { color: var(--ufpel-sky); }
+h1.title { font-size: 72px; font-weight: 700; line-height: 1.08; letter-spacing: -0.015em; }
+h2.heading { font-size: 40px; font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 28px; }
+.em { color: var(--ufpel-blue); }           /* the blue emphasis span */
+.slide.dark .em { color: var(--ufpel-sky); } /* deep blue vanishes on navy — use sky on dark */
+/* navy surfaces sitting on a LIGHT slide: same problem, and .slide.dark misses them */
+.card-insight .em, .table thead .em, .code .em { color: var(--ufpel-sky); }
+.lead { font-size: 21px; line-height: 1.55; color: var(--ufpel-muted); }
+.slide.dark .lead { color: rgba(255,255,255,.82); }
+
+/* ---- pills & chips ----------------------------------------------------- */
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  border-radius: 999px; padding: 10px 22px;
+  font-size: 15px; font-weight: 600; line-height: 1;
+  background: var(--ufpel-blue); color: #fff; border: none;
+}
+.pill.secondary { background: #fff; color: var(--ufpel-blue); }
+.chip {
+  display: inline-block; border-radius: 999px; padding: 7px 16px;
+  font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--ufpel-pale); color: var(--ufpel-blue);
+}
+.slide.dark .chip { background: rgba(181, 220, 241, .16); color: var(--ufpel-sky); }
+
+/* ---- stat trio --------------------------------------------------------- */
+.stats { display: flex; gap: 48px; }
+.stat { flex: 1; text-align: center; }
+.stat .s-label { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.stat .s-value { font-size: 72px; font-weight: 700; color: var(--ufpel-blue); line-height: 1.05; letter-spacing: -0.02em; }
+.stat .s-note { font-size: 14px; color: var(--ufpel-muted); line-height: 1.5; margin-top: 10px; }
+.slide.dark .stat .s-note { color: rgba(255,255,255,.7); }
+
+/* ---- black insight card ------------------------------------------------ */
+.card-insight {
+  background: var(--ufpel-navy); color: #fff;
+  border-radius: var(--r-card); padding: 36px 44px;
+  font-size: 20px; line-height: 1.55;
+}
+.card-insight .c-kicker {
+  font-size: 13px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ufpel-sky); font-weight: 500; margin-bottom: 10px;
+}
+
+/* ---- callouts ----------------------------------------------------------- */
+.callout {
+  border-radius: 14px; padding: 18px 24px; font-size: 17px; line-height: 1.5;
+  background: var(--ufpel-pale); border-left: 4px solid var(--ufpel-blue);
+}
+.callout.success { background: var(--success-bg); border-color: var(--success); }
+.callout.warning { background: var(--warning-bg); border-color: var(--warning); }
+.callout.danger  { background: var(--danger-bg);  border-color: var(--danger); }
+.callout b { font-weight: 600; }
+
+/* ---- periwinkle tiles --------------------------------------------------- */
+.tile {
+  width: 84px; height: 84px; border-radius: var(--r-tile);
+  background: var(--ufpel-sky);
+  display: flex; align-items: center; justify-content: center;
+  flex: none;
+}
+.tile svg { width: 46px; height: 46px; }
+
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+.feature { text-align: center; }
+.feature .tile { margin: 0 auto 22px; width: 116px; height: 116px; border-radius: 28px; }
+.feature .tile svg { width: 62px; height: 62px; }
+.feature .f-name { font-size: 21px; font-weight: 600; color: var(--ufpel-blue); margin-bottom: 10px; }
+.feature .f-text { font-size: 16px; color: var(--ufpel-muted); line-height: 1.6; }
+
+/* ---- step flow ----------------------------------------------------------- */
+.steps { display: flex; gap: 28px; align-items: stretch; }
+.step { flex: 1; position: relative; }
+.step .st-num { font-size: 14px; font-weight: 600; color: var(--ufpel-muted); margin-bottom: 12px; }
+.step .tile { margin-bottom: 16px; }
+.step .st-name { font-size: 19px; font-weight: 600; color: var(--ufpel-blue); margin-bottom: 6px; }
+.step .st-text { font-size: 14.5px; color: var(--ufpel-muted); line-height: 1.5; }
+.step + .step::before {
+  content: ''; position: absolute; left: -22px; top: 56px;
+  width: 16px; height: 16px;
+  border-top: 2.5px solid var(--ufpel-blue); border-right: 2.5px solid var(--ufpel-blue);
+  transform: rotate(45deg);
+}
+
+/* ---- agenda -------------------------------------------------------------- */
+.agenda { display: flex; flex-direction: column; gap: 34px; max-width: 820px; }
+.agenda-item { display: flex; align-items: center; gap: 28px; }
+.agenda-item .a-num {
+  width: 60px; height: 60px; border-radius: 18px; flex: none;
+  background: var(--ufpel-sky); color: var(--ufpel-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; font-weight: 700;
+}
+.agenda-item .a-name { font-size: 27px; font-weight: 600; }
+.agenda-item .a-note { font-size: 16px; color: var(--ufpel-muted); margin-top: 3px; }
+
+/* ---- table ---------------------------------------------------------------- */
+.table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 16px; }
+.table th {
+  background: var(--ufpel-navy); color: #fff; font-weight: 600;
+  text-align: left; padding: 14px 20px; font-size: 15px;
+}
+.table th:first-child { border-top-left-radius: var(--r-table); }
+.table th:last-child { border-top-right-radius: var(--r-table); }
+.table td { padding: 13px 20px; border-bottom: 1px solid #E7E9F4; }
+.table tbody tr:nth-child(even) td { background: #F7F8FF; }
+.table td.num, .table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.table .stat-cell { color: var(--ufpel-blue); font-weight: 600; }
+
+/* ---- gantt ------------------------------------------------------------------ */
+.gantt { display: grid; row-gap: 12px; font-size: 14px; }
+.gantt .g-head { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; color: var(--ufpel-muted); font-weight: 500; }
+.gantt .g-head span { text-align: center; padding-bottom: 4px; border-bottom: 1px solid #E7E9F4; }
+.gantt .g-row { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; align-items: center; }
+.gantt .g-label { font-weight: 600; font-size: 15px; padding-right: 16px; }
+.gantt .g-bar {
+  height: 26px; border-radius: 999px; background: var(--ufpel-blue);
+  color: #fff; font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; padding: 0 12px; white-space: nowrap;
+}
+.gantt .g-bar.alt { background: var(--ufpel-sky); color: var(--ufpel-ink); }
+.gantt .g-milestone {
+  width: 16px; height: 16px; background: var(--ufpel-navy);
+  transform: rotate(45deg); justify-self: center;
+}
+
+/* ---- timeline ----------------------------------------------------------------- */
+.timeline { position: relative; padding-left: 36px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: #E7E9F4; }
+.timeline .t-item { position: relative; padding-bottom: 24px; }
+.timeline .t-item::before {
+  content: ''; position: absolute; left: -34px; top: 5px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--ufpel-blue); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--ufpel-blue);
+}
+.timeline .t-date { font-size: 13px; font-weight: 600; color: var(--ufpel-blue); letter-spacing: .05em; text-transform: uppercase; }
+.timeline .t-name { font-size: 18px; font-weight: 600; margin: 2px 0 4px; }
+.timeline .t-text { font-size: 14.5px; color: var(--ufpel-muted); line-height: 1.5; }
+
+/* ---- quote ----------------------------------------------------------------------- */
+.quote { max-width: 900px; }
+.quote .q-mark { font-size: 120px; font-weight: 800; color: var(--ufpel-blue); line-height: .6; display: block; margin-bottom: 26px; }
+.quote .q-text { font-size: 34px; font-weight: 500; line-height: 1.4; letter-spacing: -0.01em; }
+.quote .q-attr { margin-top: 26px; font-size: 16px; color: var(--ufpel-muted); }
+.slide.dark .quote .q-attr { color: var(--ufpel-sky); }
+
+/* ---- code ------------------------------------------------------------------------- */
+.code {
+  background: #0B0B14; color: #E6E8F5; border-radius: 12px;
+  padding: 22px 26px; font: 14px/1.6 'SF Mono', 'Cascadia Code', monospace;
+  white-space: pre; overflow: hidden;
+}
+.code .tok-k { color: var(--ufpel-sky); }
+.code .tok-s { color: #8BE9BD; }
+.code .tok-c { color: #6B7086; }
+
+/* ---- chart figure ---------------------------------------------------------------- */
+.chart { background: #fff; }
+.chart figcaption { font-size: 13px; color: var(--ufpel-muted); margin-top: 10px; }
+.slide.dark .chart { background: transparent; }
+
+/* ---- two-column ------------------------------------------------------------------- */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.cols.wide-left { grid-template-columns: 58fr 42fr; }
+
+/* ---- bullets ----------------------------------------------------------------------- */
+ul.bullets { list-style: none; font-size: 19px; line-height: 1.5; }
+ul.bullets li { padding-left: 30px; position: relative; margin-bottom: 16px; }
+ul.bullets li::before {
+  content: ''; position: absolute; left: 4px; top: 10px;
+  width: 9px; height: 9px; border-radius: 50%; background: var(--ufpel-blue);
+}
+.slide.dark ul.bullets li::before { background: var(--ufpel-sky); }
+
+/* ---- diagram kit -------------------------------------------------------------------- */
+svg.diagram { font-family: 'Montserrat', sans-serif; }
+svg.diagram .d-node { fill: #fff; stroke: var(--ufpel-ink); stroke-width: 1.5; rx: 12; }
+svg.diagram .d-node-black { fill: var(--ufpel-navy); rx: 12; }
+svg.diagram .d-node-tile { fill: var(--ufpel-sky); rx: 12; }
+svg.diagram .d-edge { stroke: var(--ufpel-ink); stroke-width: 1.5; fill: none; }
+svg.diagram .d-edge-dash { stroke: var(--ufpel-ink); stroke-width: 1.5; fill: none; stroke-dasharray: 6 5; }
+svg.diagram .d-flow { stroke: var(--ufpel-sky); stroke-width: 1.2; fill: none; opacity: .8; }
+svg.diagram text { font-size: 14px; font-weight: 600; fill: var(--ufpel-ink); }
+svg.diagram text.on-dark { fill: #fff; }
+svg.diagram text.d-label { font-size: 12.5px; font-weight: 400; fill: var(--ufpel-muted); }
+
+/* ---- decorative flow lines (dark surfaces) ------------------------------------------ */
+.flow-lines { position: absolute; z-index: 10; pointer-events: none; }
+
+/* quiet brand anchor for LIGHT content slides — keeps white pages from
+   reading as a plain document while staying calm (rules §4) */
+.corner-flow { position: absolute; top: 0; right: 0; z-index: 1; pointer-events: none; }
+
+/* ---- divider number ------------------------------------------------------------------ */
+.divider-num {
+  font-size: 200px; font-weight: 800; color: var(--ufpel-blue);
+  line-height: 1; letter-spacing: -0.04em;
+}

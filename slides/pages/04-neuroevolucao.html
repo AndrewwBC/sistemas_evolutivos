@@ -1,0 +1,39 @@
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">Contexto</div>
+    <h2 class="heading" data-asset="heading">Neuroevolução: <span class="em">evoluir</span> a rede em vez de projetá-la</h2>
+    <div class="body">
+      <div class="cols wide-left" style="align-items:center;">
+        <ul class="bullets" data-asset="bullets">
+          <li><b>Neuroevolução (NE)</b> = otimizar a estrutura e/ou os pesos de redes neurais com algoritmos evolutivos: população, mutação, crossover e seleção.</li>
+          <li>Começou com redes pequenas (pole balancing, labirintos). <b>NEAT</b> (2002) popularizou evoluir topologias protegendo inovações com <b>especiação</b>.</li>
+          <li>Tendência recente, que o paper segue: a evolução busca a <b>arquitetura</b>, o backprop ajusta os <b>pesos</b> — um otimizador híbrido.</li>
+        </ul>
+<svg class="diagram" data-asset="diagram" width="500" height="360" viewBox="0 0 500 360">
+  <defs><marker id="arr4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14202E"/></marker></defs>
+  <rect x="10" y="10" width="480" height="140" rx="20" fill="#EAF4FB" stroke="#B5DCF1" stroke-width="1.5"/>
+  <text x="34" y="44" style="font-size:13px; font-weight:600; letter-spacing:.08em; fill:#54677D;">EVOLUÇÃO · BUSCA GLOBAL</text>
+  <text x="34" y="78" style="font-size:20px; font-weight:700; fill:#00408F;">Estrutura</text>
+  <text x="34" y="106" style="font-size:15px; fill:#14202E;">nº de camadas, nº de kernels,</text>
+  <text x="34" y="128" style="font-size:15px; fill:#14202E;">formato de cada kernel, stride</text>
+  <g transform="translate(372,80)">
+    <circle cx="0" cy="-30" r="9" fill="#00408F"/><circle cx="-28" cy="12" r="9" fill="#B5DCF1" stroke="#14202E" stroke-width="1.2"/>
+    <circle cx="28" cy="12" r="9" fill="#B5DCF1" stroke="#14202E" stroke-width="1.2"/><circle cx="0" cy="40" r="9" fill="#fff" stroke="#14202E" stroke-width="1.2"/>
+    <circle cx="56" cy="-24" r="9" fill="#fff" stroke="#14202E" stroke-width="1.2"/><circle cx="-56" cy="-18" r="9" fill="#00408F"/>
+  </g>
+  <circle cx="250" cy="180" r="20" fill="#fff" stroke="#14202E" stroke-width="1.5"/>
+  <text x="250" y="188" text-anchor="middle" style="font-size:24px; font-weight:600;">+</text>
+  <rect x="10" y="210" width="480" height="140" rx="20" fill="#002A5C"/>
+  <text x="34" y="244" style="font-size:13px; font-weight:600; letter-spacing:.08em; fill:#B5DCF1;">BACKPROP · AJUSTE LOCAL</text>
+  <text x="34" y="278" style="font-size:20px; font-weight:700; fill:#fff;">Pesos</text>
+  <text x="34" y="306" style="font-size:15px; fill:#fff;">gradiente descendente (Adadelta)</text>
+  <text x="34" y="328" style="font-size:15px; fill:#fff;">sobre os pesos herdados</text>
+  <path d="M360 300 C 380 250, 420 330, 440 280 S 470 300, 470 300" fill="none" stroke="#B5DCF1" stroke-width="2.5"/>
+  <circle cx="440" cy="280" r="5" fill="#B5DCF1"/>
+</svg>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

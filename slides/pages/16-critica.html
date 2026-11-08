@@ -1,0 +1,26 @@
+<!-- SLIDE 14 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">Leitura crítica</div>
+    <h2 class="heading" data-asset="heading">O que o paper <span class="em">mostra</span> — e o que falta</h2>
+    <div class="body">
+      <div class="cols" style="gap:48px; align-items:stretch;">
+        <div class="card-insight" data-asset="insight" style="padding:34px 40px;">
+          <div class="c-kicker">O achado principal</div>
+          <div style="font-size:19px; line-height:1.55;">Nenhuma rede viu o dataset inteiro, mas a população viu. Filhos acertam <span class="em" style="font-weight:700;">~96% no MNIST sem treino</span> — só é possível se o crossover <b>transfere features aprendidas</b> pelos pais.</div>
+          <div style="font-size:16px; line-height:1.5; margin-top:18px; color:rgba(255,255,255,.75);">Especiação alinha os genes no crossover: filhos melhores (95,6% vs 72,5% no MNIST), mas redes que quase não crescem.</div>
+        </div>
+        <div data-asset="limitacoes">
+          <div class="kicker" style="margin-bottom:14px;">Limitações</div>
+          <ul class="bullets" style="font-size:17px;">
+            <li><b>Redes pequenas</b> (~10⁵ parâmetros): CIFAR-10 fica em ~55%. O limite de 16 espécies travou mutações estruturais.</li>
+            <li>Kernels de formato livre <b>sem ablação</b>: não se mede se ajudam de fato.</li>
+            <li>Fitness = acurácia <b>no conjunto de teste</b>: a seleção “enxerga” o teste, o que infla os números.</li>
+            <li>Só 10 execuções, <b>sem teste estatístico</b> — os próprios autores pedem mais experimentos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>

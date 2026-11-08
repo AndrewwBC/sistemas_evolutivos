@@ -1,0 +1,19 @@
+<!-- SLIDE 11 -->
+<section class="slide">
+  <div class="content">
+    <div class="kicker">O método · Algoritmo</div>
+    <h2 class="heading" data-asset="heading">Uma geração, passo a <span class="em">passo</span></h2>
+    <div class="body">
+      <div class="steps" data-asset="steps">
+        <div class="step"><div class="st-num">Etapa 01</div><div class="tile"><svg><use href="#icon-gear"/></svg></div><div class="st-name">Treino e avaliação</div><div class="st-text">Backprop (Adadelta) em <b>10% aleatórios</b> do treino; fitness = acurácia no teste.</div></div>
+        <div class="step"><div class="st-num">Etapa 02</div><div class="tile"><svg><use href="#icon-chart"/></svg></div><div class="st-name">Calibração</div><div class="st-text">Fitness relativo f<sub>r</sub> = σ((f − μ) / σ<sub>f</sub>) ∈ (0, 1), usado como probabilidade.</div></div>
+        <div class="step"><div class="st-num">Etapa 03</div><div class="tile"><svg><use href="#icon-diamond"/></svg></div><div class="st-name">Evolução</div><div class="st-text">Mutações estruturais + crossover; pais sorteados ∝ fitness relativo, dentro da espécie.</div></div>
+        <div class="step"><div class="st-num">Etapa 04</div><div class="tile"><svg><use href="#icon-shield"/></svg></div><div class="st-name">Culling</div><div class="st-text">Acima do limite, remove redes com p ∝ idade / (f<sub>r</sub> · complexidade). Filhos e campeões ficam.</div></div>
+      </div>
+      <div class="callout" data-asset="callout" style="margin-top:48px;">
+        <b>Ciclo repetido por 100 gerações.</b> Início com especiação: 8 espécies, a primeira mínima (só a camada de saída olhando a entrada) e as outras geradas por mutações aleatórias.
+      </div>
+    </div>
+  </div>
+  <div class="footer"><img src="assets/ufpel-marca.svg" alt="Universidade Federal de Pelotas"></div>
+</section>
