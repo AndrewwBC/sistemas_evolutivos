@@ -1,0 +1,48 @@
+% Requer: \usepackage{booktabs,multirow,graphicx}
+% Valores do paper: Tabela I de Hadjiivanov & Blair (2021), média ± dp em 10 execuções após 100 gerações.
+% Valores nossos: média ± dp em 10 execuções (sementes 0-9) após 100 gerações.
+\begin{table}[t]
+\centering
+\small
+\caption{Comparação com o método original~\cite{hadjiivanov2021epigenetic}. Média $\pm$ desvio-padrão (\%) em 10
+execuções de 100 gerações. \emph{Melhor rede}: acurácia de teste do campeão da população final.
+\emph{Média pop.}: acurácia média da população na última geração. \emph{Filhos antes do BP}: acurácia dos
+filhos recém-gerados, apenas com os pesos herdados. Em~\cite{hadjiivanov2021epigenetic} a fitness é a acurácia
+no conjunto de teste; aqui a seleção usa um conjunto de validação separado (5\,000 imagens do treino) e o
+teste é medido apenas ao final. Em negrito, o melhor valor de cada coluna por dataset.}
+\label{tab:comparacao-paper}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llccc}
+\toprule
+Dataset & Método & Melhor rede & Média pop. & Filhos antes do BP \\
+\midrule
+\multirow{5}{*}{MNIST}
+ & Original, com especiação & 98,13 $\pm$ 0,15 & 96,80 $\pm$ 0,40 & \textbf{95,60 $\pm$ 1,80} \\
+ & Original, sem especiação & 97,98 $\pm$ 0,13 & 93,70 $\pm$ 1,10 & 72,50 $\pm$ 10,70 \\
+ & M1: steady state aleatório & 96,11 $\pm$ 1,09 & 84,17 $\pm$ 8,37 & 18,16 $\pm$ 4,38 \\
+ & M2: crossover por maioria  & 98,46 $\pm$ 0,11 & 97,44 $\pm$ 0,66 & 75,99 $\pm$ 4,45 \\
+ & M3: crossover elitista     & \textbf{98,53 $\pm$ 0,16} & \textbf{97,89 $\pm$ 0,33} & 72,74 $\pm$ 5,33 \\
+\midrule
+\multirow{5}{*}{Fashion-MNIST}
+ & Original, com especiação & 88,54 $\pm$ 0,70 & 85,30 $\pm$ 1,40 & \textbf{82,00 $\pm$ 4,30} \\
+ & Original, sem especiação & 88,44 $\pm$ 0,36 & 83,30 $\pm$ 1,10 & 64,90 $\pm$ 7,80 \\
+ & M1: steady state aleatório & 84,99 $\pm$ 1,92 & 73,75 $\pm$ 6,80 & 16,45 $\pm$ 3,99 \\
+ & M2: crossover por maioria  & \textbf{90,05 $\pm$ 0,30} & 88,61 $\pm$ 1,23 & 66,82 $\pm$ 4,66 \\
+ & M3: crossover elitista     & 89,90 $\pm$ 0,29 & \textbf{88,80 $\pm$ 0,89} & 66,75 $\pm$ 5,69 \\
+\midrule
+\multirow{5}{*}{SVHN}
+ & Original, com especiação & 79,86 $\pm$ 2,06 & 70,20 $\pm$ 7,50 & \textbf{66,50 $\pm$ 8,00} \\
+ & Original, sem especiação & 80,22 $\pm$ 0,89 & 66,50 $\pm$ 3,10 & 44,40 $\pm$ 7,40 \\
+ & M1: steady state aleatório & 75,39 $\pm$ 3,37 & 53,35 $\pm$ 6,88 & 13,74 $\pm$ 1,20 \\
+ & M2: crossover por maioria  & 84,93 $\pm$ 1,07 & 85,21 $\pm$ 1,69 & 63,70 $\pm$ 3,83 \\
+ & M3: crossover elitista     & \textbf{85,29 $\pm$ 0,99} & \textbf{85,33 $\pm$ 1,51} & 61,40 $\pm$ 7,06 \\
+\midrule
+\multirow{5}{*}{CIFAR-10}
+ & Original, com especiação & 51,35 $\pm$ 3,44 & 43,90 $\pm$ 4,80 & 42,70 $\pm$ 5,10 \\
+ & Original, sem especiação & 52,44 $\pm$ 0,85 & 41,90 $\pm$ 1,10 & 32,40 $\pm$ 1,80 \\
+ & M1: steady state aleatório & 45,59 $\pm$ 3,18 & 35,41 $\pm$ 2,60 & 12,05 $\pm$ 0,92 \\
+ & M2: crossover por maioria  & \textbf{58,62 $\pm$ 1,09} & 56,41 $\pm$ 1,70 & \textbf{44,58 $\pm$ 1,63} \\
+ & M3: crossover elitista     & 58,61 $\pm$ 0,93 & \textbf{56,98 $\pm$ 1,45} & 43,36 $\pm$ 2,10 \\
+\bottomrule
+\end{tabular}}
+\end{table}

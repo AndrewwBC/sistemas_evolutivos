@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 slides/out/*.debug.png
 .DS_Store
+.venv/
+experimentos/logs*/
+experimentos/jobs*.txt
+experimentos/run_*.out
